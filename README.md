@@ -1,7 +1,7 @@
 # Breast Ultrasound Image Enhancement (C Implementation)
 ### 乳房超音波影像特徵強化專案
 
-本專案為 **[程式設計]** 之期末微專題。
+本專案為 **程式設計** 之期末微專題。
 專案利用 C 語言實作高效能矩陣卷積運算（Convolution），針對乳房超音波影像進行邊緣檢測，以強化潛在病灶的特徵。
 
 ## 📂 專案簡介 (Introduction)
