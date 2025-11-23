@@ -1,0 +1,71 @@
+.vscode環境更改
+
+
+launch.json
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: gcc 執行目前的檔案",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/main", 
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "啟用 gdb 的美化列印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: gcc 建置使用中檔案",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+tasks.json
+
+
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc 建置使用中檔案",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/main",
+                "-lm"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "偵錯工具產生的工作"
+        }
+    ],
+    "version": "2.0.0"
+}
